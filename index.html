@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ficha Dinâmica - Heroes and Monsters</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <div id="interface">
+        <div id="upper-section">
+            <div class="element">
+                <label for="character-name" >Nome:</label>
+                <input id="character-name">
+            </div>
+            
+            <div class="element">
+                <label for="race-select" >Raça:</label>
+                <select id="race-select">
+                    <option value="null"></option>
+                    <option value="human">Humano</option>
+                    <option value="elf">Elfo</option>
+                    <option value="dwarf">Anão</option>
+                    <option value="goblin">Goblin</option>
+                </select>
+            </div>
+
+            <div class="element">
+                <label for="background-select">Antecedende:</label>
+                <select id="background-select">
+                    <option value="null"></option>
+                    <option value="aldeao">Aldeão</option>
+                    <option value="cacadorRecompensas">Caçador de Recompensas</option>
+                </select>
+            </div>
+
+            <div id="alignment" class="element">
+                <label for="alignment-table">Alinhamento:</label>
+                <table id="alignment-table">
+                    <tr>
+                        <th class="table-top-left"></th>
+                        <th>Leal</th>
+                        <th>Neutro</th>
+                        <th>Caótico</th>
+                    </tr>
+                    <tr>
+                        <td class="left-label">Bom</td>
+                        <td><input type="radio" id="lawful-good" name="alignment-input" value="lawful-good"></td>
+                        <td><input type="radio" id="neutral-good" name="alignment-input" value="neutral-good"></td>
+                        <td><input type="radio" id="chaotic-good" name="alignment-input" value="chaotic-good"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-label">Neutro</td>
+                        <td><input type="radio" id="lawful-neutral" name="alignment-input" value="lawful-neutral"></td>
+                        <td><input type="radio" id="neutral-neutral" name="alignment-input" value="neutral-neutral"></td>
+                        <td><input type="radio" id="chaotic-neutral" name="alignment-input" value="chaotic-neutral"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-label">Mal</td>
+                        <td><input type="radio" id="lawful-evil" name="alignment-input" value="lawful-evil"></td>
+                        <td><input type="radio" id="neutral-evil" name="alignment-input" value="neutral-evil"></td>
+                        <td><input type="radio" id="chaotic-evil" name="alignment-input" value="chaotic-evil"></td>
+                    </tr>
+                <table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
