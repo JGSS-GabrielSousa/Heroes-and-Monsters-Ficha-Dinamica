@@ -1,22 +1,29 @@
-* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import url("styles.css");
+
+button {
+    margin: 10px 0px;
+    width: 80px;
 }
 
-body {
-    background-color: #333;
+#interface {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+#left-section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
 }
-
 #upper-section {
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 10px;
 }
 
 #alignment-table {
@@ -35,6 +42,7 @@ label {
 #alignment .left-label {
     text-align: end;
     background-color: grey;
+    font-size: 16px;
 }
 
 #alignment th {
@@ -50,13 +58,3 @@ label {
     background-color: darkgray;
 }
 
-.element {
-    background-color: darkgray;
-    box-shadow: 2px 2px 4px black;
-    margin: 5px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    min-height: 50px;
-}
