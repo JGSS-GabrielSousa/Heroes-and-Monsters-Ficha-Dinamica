@@ -24,6 +24,7 @@ button {
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 10px;
+    width: 100%;
 }
 
 #alignment-table {
