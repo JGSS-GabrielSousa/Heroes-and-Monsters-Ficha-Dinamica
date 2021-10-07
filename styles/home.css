@@ -5,6 +5,10 @@ button {
     width: 80px;
 }
 
+select {
+    margin-bottom: 10px;
+}
+
 #interface {
     display: flex;
     flex-direction: row;
@@ -27,12 +31,26 @@ button {
     width: 100%;
 }
 
-#alignment-table {
+.classes {
+}
+
+#classes-table {
+    margin-top: 5px;
+}
+
+#subclass {
+    display: none;
+}
+
+#alignment-table,
+table {
     border-collapse: collapse;
 }
 
 #alignment td,
-#alignment th {
+#alignment th, 
+th,
+td {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
@@ -46,7 +64,8 @@ button {
     font-size: 16px;
 }
 
-#alignment th {
+#alignment th,
+th {
     background-color: grey;
     text-align: center;
     font-size: 16px;

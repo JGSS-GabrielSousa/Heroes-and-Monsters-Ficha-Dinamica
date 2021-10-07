@@ -16,14 +16,12 @@
 
     <div id="interface">
         <div id="left-section">
-            <form>
-                <button id="fileSelect">
-                    Carregar
-                    <input type="file" id="fileElem" accept=".json" style="display:none">
-                </button>
-                <button>Salvar</button>
-                <button>Limpar</button>
-            </form>
+            <button id="fileSelect">
+                Carregar
+                <input type="file" id="fileElem" accept=".json" style="display:none">
+            </button>
+            <button>Salvar</button>
+            <button>Limpar</button>
         </div>
         <div id="upper-section">
             <div class="element">
@@ -90,6 +88,62 @@
                 </select>
             </div>
 
+            <div class="element classes">
+                <label for="class-select" >Classe:</label>
+                <select id="class-select">
+                    <option value="null"></option>
+                    <option value="alchemist">Alquimista</option>
+                    <option value="archer">Arqueiro</option>
+                    <option value="trow-master">Arremessador Mestre</option>
+                    <option value="assassin">Assassino</option>
+                    <option value="spellwarp-sniper">Atirador Mágico</option>
+                    <option value="barbarian">Bárbaro</option>
+                    <option value="bard">Bardo</option>
+                    <option value="blood-hunter">Caçador de Sangue</option>
+                    <option value="chartist">Cartista</option>
+                    <option value="cleric">Clérigo</option>
+                    <option value="druid">Druida</option>
+                    <option value="duelist">Duelista</option>
+                    <option value="combat-trapsmith">Especialista em Armadilhas</option>
+                    <option value="sorcerer">Feiticeiro</option>
+                    <option value="fighter">Guerreiro</option>
+                    <option value="inquisitor">Inquisidor</option>
+                    <option value="rogue">Ladino</option>
+                    <option value="wizard">Mago</option>
+                    <option value="warlock">Místico</option>
+                    <option value="monk">Monge</option>
+                    <option value="necromancer">Necromante</option>
+                    <option value="noble">Nobre</option>
+                    <option value="paladin">Paladino</option>
+                    <option value="ranger">Patrulheiro</option>
+                    <option value="pirate">Pirata</option>
+                    <option value="gunslinger">Pistoleiro</option>
+                    <option value="sage">Sábio</option>
+                    <option value="sage-evil-genius">Sábio – Gênio do Mal</option>
+                    <option value="samurai">Samurai</option>
+                </select>
+
+                <label for="class-level" >Nível:</label>
+                <input id="class-level" style="width:50px">
+
+                <div id="subclass">
+                    <label for="subclass-select">Sub-Classe:</label>
+                    <select id="subclass-select">
+                        <option value="null"></option>
+                        <option value="aasimar">Aasimar</option>
+                    </select>
+                </div>
+
+                <button onclick="addClass()">Adicionar</button>
+
+                <table id="classes-table">
+                    <th>Nível</th>
+                    <th>Classe</th>
+                    <th>Sub-Classe</th>
+                    <th>Del.</th>
+                </table>
+            </div>
+            
             <div id="alignment" class="element">
                 <label for="alignment-table">Alinhamento:</label>
                 <table id="alignment-table">
