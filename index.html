@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="app.js" defer></script>
+    <script src="scripts/fileHandler.js" defer></script>
+    <script src="scripts/apiHandler.js" defer></script>
+    <script src="scripts/app.js" defer></script>
     <title>Ficha Dinâmica - Heroes and Monsters</title>
 </head>
 <body>
@@ -15,77 +17,88 @@
     </header>
 
     <div id="interface">
-        <div id="left-section">
-            <button id="fileSelect">
+        <div id="top-section">
+            <button id="loadChar">
                 Carregar
-                <input type="file" id="fileElem" accept=".json" style="display:none">
+                <input type="file" id="loadCharElement" accept=".json" style="display:none">
             </button>
-            <button>Salvar</button>
-            <button>Limpar</button>
+            <button id="saveChar">
+                Salvar
+            </button>
+            <button id="clear-sheet">Limpar</button>
         </div>
         <div id="upper-section">
-            <div class="element">
-                <label for="character-name" >Nome:</label>
-                <input id="character-name">
-            </div>
+            <div id="section-name-race">
+                <div class="element">
+                    <label for="character-name" >Nome:</label>
+                    <input id="character-name">
+                </div>
             
-            <div class="element">
-                <label for="race-select" >Raça:</label>
-                <select id="race-select">
-                    <option value="null"></option>
-                    <option value="aasimar">Aasimar</option>
-                    <option value="amazon">Amazona</option>
-                    <option value="dwarf">Anão</option>
-                    <option value="dragonborn">Draconato</option>
-                    <option value="drow">Drow</option>
-                    <option value="duergar">Duergar</option>
-                    <option value="eladrin">Eladrin</option>
-                    <option value="elf">Elfo</option>
-                    <option value="shifter">Feral</option>
-                    <option value="warforged">Forjado Bélico</option>
-                    <option value="genasi">Genasi</option>
-                    <option value="gith">Gith</option>
-                    <option value="gnome">Gnomo</option>
-                    <option value="wild-gnome">Gnomo da Floresta</option>
-                    <option value="dark-gnome">Gnomo das Profundezas</option>
-                    <option value="goblin">Goblin</option>
-                    <option value="goliath">Golias</option>
-                    <option value="halfling">Halfling</option>
-                    <option value="lizard-folk">Homem-Lagarto</option>
-                    <option value="human">Humano</option>
-                    <option value="kobold">Kobold</option>
-                    <option value="half-elf">Meio–Elfo</option>
-                    <option value="half-orc">Meio–Orc</option>
-                    <option value="minotaur">Minotauro</option>
-                    <option value="orc">Orc</option>
-                    <option value="paskkin">Paskkin</option>
-                    <option value="tabaxi">Tabaxi</option>
-                    <option value="tiefling">Tiefling</option>
-                    <option value="tortle">Tortle</option>
-                </select>
-            </div>
+                <div class="element">
+                    <label for="race-select" >Raça:</label>
+                    <select id="race-select">
+                        <option value="null"></option>
+                        <option value="aasimar">Aasimar</option>
+                        <option value="amazon">Amazona</option>
+                        <option value="dwarf">Anão</option>
+                        <option value="dragonborn">Draconato</option>
+                        <option value="drow">Drow</option>
+                        <option value="duergar">Duergar</option>
+                        <option value="eladrin">Eladrin</option>
+                        <option value="elf">Elfo</option>
+                        <option value="shifter">Feral</option>
+                        <option value="warforged">Forjado Bélico</option>
+                        <option value="genasi">Genasi</option>
+                        <option value="gith">Gith</option>
+                        <option value="gnome">Gnomo</option>
+                        <option value="wild-gnome">Gnomo da Floresta</option>
+                        <option value="dark-gnome">Gnomo das Profundezas</option>
+                        <option value="goblin">Goblin</option>
+                        <option value="goliath">Golias</option>
+                        <option value="halfling">Halfling</option>
+                        <option value="lizard-folk">Homem-Lagarto</option>
+                        <option value="human">Humano</option>
+                        <option value="kobold">Kobold</option>
+                        <option value="half-elf">Meio–Elfo</option>
+                        <option value="half-orc">Meio–Orc</option>
+                        <option value="minotaur">Minotauro</option>
+                        <option value="orc">Orc</option>
+                        <option value="paskkin">Paskkin</option>
+                        <option value="tabaxi">Tabaxi</option>
+                        <option value="tiefling">Tiefling</option>
+                        <option value="tortle">Tortle</option>
+                    </select>
+                </div>
 
-            <div class="element">
-                <label for="background-select">Antecedende:</label>
-                <select id="background-select">
-                    <option value="null"></option>
-                    <option value="acolyte">Acólito</option>
-                    <option value="anthropologist">Antropólogo</option>
-                    <option value="alchemist-apprentice">Aprendiz de Alquimista</option>
-                    <option value="guild-craftsman">Artesão de Guilda</option>
-                    <option value="artist">Artista</option>
-                    <option value="bounty-hunter">Caçador de Recompensas</option>
-                    <option value="charlatan">Charlatão</option>
-                    <option value="criminal">Criminoso</option>
-                    <option value="hermit">Eremita</option>
-                    <option value="folk-hero">Herói Popular</option>
-                    <option value="intellectual">Intelectual</option>
-                    <option value="sailor">Marinheiro</option>
-                    <option value="guild-merchant">Mercante de Guilda</option>
-                    <option value="noble">Nobre</option>
-                    <option value="orphan">Orfão</option>
-                    <option value="soldier">Soldado</option>
-                </select>
+                <div class="element" id="subrace-element">
+                    <label for="subrace-select" >Sub-Raça:</label>
+                    <select id="subrace-select">
+                        <option value="null"></option>
+                    </select>
+                </div>
+
+                <div class="element">
+                    <label for="background-select">Antecedende:</label>
+                    <select id="background-select">
+                        <option value="null"></option>
+                        <option value="acolyte">Acólito</option>
+                        <option value="anthropologist">Antropólogo</option>
+                        <option value="alchemist-apprentice">Aprendiz de Alquimista</option>
+                        <option value="guild-craftsman">Artesão de Guilda</option>
+                        <option value="artist">Artista</option>
+                        <option value="bounty-hunter">Caçador de Recompensas</option>
+                        <option value="charlatan">Charlatão</option>
+                        <option value="criminal">Criminoso</option>
+                        <option value="hermit">Eremita</option>
+                        <option value="folk-hero">Herói Popular</option>
+                        <option value="intellectual">Intelectual</option>
+                        <option value="sailor">Marinheiro</option>
+                        <option value="guild-merchant">Mercante de Guilda</option>
+                        <option value="noble">Nobre</option>
+                        <option value="orphan">Orfão</option>
+                        <option value="soldier">Soldado</option>
+                    </select>
+                </div>
             </div>
 
             <div class="element classes">
@@ -126,11 +139,10 @@
                 <label for="class-level" >Nível:</label>
                 <input id="class-level" style="width:50px">
 
-                <div id="subclass">
+                <div id="subclass-element">
                     <label for="subclass-select">Sub-Classe:</label>
                     <select id="subclass-select">
                         <option value="null"></option>
-                        <option value="aasimar">Aasimar</option>
                     </select>
                 </div>
 

@@ -2,7 +2,7 @@
 
 button {
     margin: 10px 0px;
-    width: 80px;
+    min-width: 80px;
 }
 
 select {
@@ -10,24 +10,24 @@ select {
 }
 
 #interface {
-    display: flex;
-    flex-direction: row;
     margin: 10px;
 }
 
-#left-section {
+#top-section {
     display: flex;
-    flex-direction: column;
-    margin: 10px;
-    align-items: flex-start;
+    flex-direction: row;
 }
+
+#top-section button {
+    margin: 10px;
+}
+
 #upper-section {
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: 10px;
     width: 100%;
 }
 
@@ -38,38 +38,23 @@ select {
     margin-top: 5px;
 }
 
-#subclass {
+#section-name-race{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#subrace-element{
     display: none;
 }
 
-#alignment-table,
-table {
-    border-collapse: collapse;
-}
-
-#alignment td,
-#alignment th, 
-th,
-td {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
-    width: 66px;
-    text-align: center;
-}
-
-#alignment .left-label {
-    text-align: end;
-    background-color: grey;
-    font-size: 16px;
+#subclass-element {
+    display: none;
 }
 
 #alignment th,
 th {
     background-color: grey;
-    text-align: center;
-    font-size: 16px;
-    font-weight: normal;
 }
 
 #alignment .table-top-left {
@@ -78,3 +63,13 @@ th {
     background-color: darkgray;
 }
 
+#alignment .left-label {
+    text-align: end;
+    background-color: grey;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#alignment table {
+    width: max-content;
+}
