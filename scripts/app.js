@@ -12,7 +12,8 @@ const player = {
     race: "",
     background: "",
     alignment: "",
-    classes: []
+    classes: [],
+    level: 0
 };
 
 
@@ -60,6 +61,11 @@ function addClass(){
     }
 }
 
+function clearClass() {
+    clearClassTable();
+    player.classes = [];
+    player.level = 0;
+}
 
 function addClassToClassTable(CharClass, CharSubClass, CharClassLevel){
     const level = document.querySelector("#class-level");
@@ -96,6 +102,11 @@ function addClassToClassTable(CharClass, CharSubClass, CharClassLevel){
         level: CharClassLevel,
         subclass: CharSubClass,
     });
+
+    player.level = 0;
+    for(let i = 0; i < player.classes.length; i++){
+        player.level += parseInt(player.classes[i].level);
+    }
 }
 
 
