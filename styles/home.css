@@ -1,7 +1,7 @@
 @import url("styles.css");
 
 button {
-    margin: 10px 0px;
+    margin: 5px 0px;
     min-width: 80px;
 }
 
@@ -72,4 +72,8 @@ th {
 
 #alignment table {
     width: max-content;
+}
+
+#class-level {
+    margin-bottom: 5px;
 }

@@ -16,6 +16,8 @@ button {
     cursor: pointer;
     text-transform: capitalize;
     font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 5px;
 }
 
 input {
@@ -49,6 +51,8 @@ th {
 
 .element {
     background-color: darkgray;
+    border: 1px solid #333;
+    border-radius: 5px;
     box-shadow: 2px 2px 4px black;
     margin: 10px;
     padding: 10px;
