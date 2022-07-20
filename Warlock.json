@@ -1,0 +1,14 @@
+{
+    "name": "Warlock",
+    "race": "eladrin",
+    "background": "bounty-hunter",
+    "alignment": "",
+    "classes": [
+        {
+            "class": "Necromante",
+            "level": "10",
+            "subclass": "Ceifeiro"
+        }
+    ],
+    "level": 10
+}

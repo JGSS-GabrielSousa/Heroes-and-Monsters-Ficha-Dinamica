@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: #F2EECB;
 }
 
 label {
@@ -23,6 +23,18 @@ button {
 input {
     height: max-content;
     outline: 0;
+    min-width: 20px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 select {
@@ -38,7 +50,6 @@ td {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
-    width: 66px;
     text-align: center;
     font-size: 12px;
 }
@@ -47,6 +58,7 @@ th {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    background-color: grey;
 }
 
 .element {
