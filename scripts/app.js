@@ -92,10 +92,6 @@ function addClassToClassTable(CharClass, CharSubClass, CharClassLevel){
     newText = document.createTextNode(CharSubClass);
     newCell.appendChild(newText);
 
-    newCell = newRow.insertCell(3);
-    newText = document.createTextNode("R");
-    newCell.appendChild(newText);
-
 
     player.classes.push({
         class: CharClass,

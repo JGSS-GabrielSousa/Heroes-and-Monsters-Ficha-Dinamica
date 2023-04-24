@@ -31,11 +31,19 @@ select {
     width: 100%;
 }
 
-.classes {
+#classes {
+    width: 250px;
 }
 
 #classes-table {
     margin-top: 5px;
+}
+#classes-table th {
+    background-color: #333;
+}
+#classes-table th:first-child,
+#classes-table td:first-child {
+    width: 10px;
 }
 
 #section-name-race{
@@ -52,20 +60,17 @@ select {
     display: none;
 }
 
-#alignment th,
-th {
-    background-color: grey;
+#alignment th {
+    background-color: #333;
 }
-
 #alignment .table-top-left {
     border-top: 0px;
     border-left: 0px;
-    background-color: darkgray;
+    background-color: transparent;
 }
 
 #alignment .left-label {
     text-align: end;
-    background-color: grey;
     font-size: 14px;
     font-weight: bold;
 }

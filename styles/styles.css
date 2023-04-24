@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: #121212;
 }
 
 label {
@@ -16,17 +16,26 @@ button {
     cursor: pointer;
     text-transform: capitalize;
     font-weight: bold;
-    border: 1px solid #333;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #f5f5f5;
     border-radius: 5px;
 }
 
 input {
     height: max-content;
     outline: 0;
+    background-color: #333;
+    color: #f5f5f5;
+    border: 1px solid #555;
+    padding: 5px;
 }
 
 select {
+    padding: 5px;
     outline: 0;
+    background-color: #333;
+    color: #f5f5f5;
 }
 
 table {
@@ -50,7 +59,8 @@ th {
 }
 
 .element {
-    background-color: darkgray;
+    background-color: #192026;
+    color: #f5f5f5;
     border: 1px solid #333;
     border-radius: 5px;
     box-shadow: 2px 2px 4px black;
