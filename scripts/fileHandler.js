@@ -19,7 +19,7 @@ saveCharSelect.addEventListener("click", function (event) {
     var a = document.createElement("a");
     var file = new Blob([JSON.stringify(player, null, 4)], {type: "text/plain"});
     a.href = URL.createObjectURL(file);
-    a.download = "test.json";
+    a.download = player.name+".json";
     a.click();
 });
 
@@ -35,6 +35,7 @@ function HandleLoadedCharacter(event){
     player.background = obj.background;
 
     clearClassTable();
+    CalculateAttributesValue();
 
     switch(obj.alignment){
         case "lawful-good":

@@ -82,3 +82,49 @@ select {
 #class-level {
     margin-bottom: 5px;
 }
+
+.class-label {
+    display: none;
+}
+
+#attributes-section {
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+#attributes-section td {
+    border: none;
+}
+
+.attribute-element {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+
+.attribute-value {
+    color: black;
+    background-color: darkgray;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px black;
+    padding: 0px 10px;
+    width: 80px;
+    text-align: center;
+}
+
+#attributes-section .table-hidden{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+#attributes-section td{
+    padding: 2px;
+}
+#attributes-section h2{
+    text-align: end;
+    margin: 0px 10px 0px 10px;
+}
+#attributes-section h1{
+    text-align: end;
+    margin: 0px 10px 0px 10px;
+}

@@ -47,7 +47,6 @@ td {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
-    width: 66px;
     text-align: center;
     font-size: 12px;
 }
@@ -56,6 +55,7 @@ th {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    background-color: grey;
 }
 
 .element {

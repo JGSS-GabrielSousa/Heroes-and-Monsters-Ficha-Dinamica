@@ -1,5 +1,6 @@
 const characterName = document.getElementById("character-name");
 const characterRace = document.getElementById("race-select");
+const characterSubRace = document.getElementById("subrace-select");
 const characterBackground = document.getElementById("background-select");
 const characterClass = document.getElementById("class-select");
 const characterSubClass = document.getElementById("subclass-select");
@@ -7,18 +8,74 @@ const characterSubClass = document.getElementById("subclass-select");
 const subraceBackup = document.getElementById("subrace-element").innerHTML;
 const subclassBackup = document.getElementById("subclass-element").innerHTML;
 
-const player = {
+export const player = {
     name: "",
     race: "",
     background: "",
     alignment: "",
     classes: [],
-    level: 0
+    level: 0,
+    attributes: {
+        strength:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        vitality:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        agility:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        charisma:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        willpower:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        wisdom:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        },
+        intelligence:{
+            total: 0,
+            racial: 0,
+            class: 0,
+            level: 0,
+            others: 0
+        }
+    }
 };
 
 
 let classPreSelected = false;
 function addClass(){
+    document.querySelector("label.class-label").style.display = "inline-block"
+    document.querySelector("select#class-select.class-label").style.display = "inline-block"
+    document.querySelector("#class-level-label").style.display = "inline-block"
+    document.querySelector("#class-level").style.display = "inline-block"
+
     let level = document.querySelector("#class-level");
     level.value = level.value.replace(/[^0-9]/g, '');
     
@@ -78,6 +135,10 @@ function addClassToClassTable(CharClass, CharSubClass, CharClassLevel){
     classPreSelected = false;
     characterClass.removeAttribute("disabled")
     level.removeAttribute("disabled")
+    document.querySelector("label.class-label").style.display = "none"
+    document.querySelector("select#class-select.class-label").style.display = "none"
+    document.querySelector("#class-level-label").style.display = "none"
+    document.querySelector("#class-level").style.display = "none"
 
     const newRow = table.insertRow(-1);
     let newCell = newRow.insertCell(0);
@@ -130,6 +191,42 @@ document.getElementById("clear-sheet").addEventListener("click", function (event
     document.getElementById("lawful-evil").checked = false;
     document.getElementById("neutral-evil").checked = false;
     document.getElementById("chaotic-evil").checked = false;
+});
+
+
+document.getElementById("alignment-table").addEventListener("click", function (event) {
+    if(document.getElementById("lawful-good").checked){
+        player.alignment = "lawful-good";
+    }
+    else if(document.getElementById("neutral-good").checked){
+        player.alignment = "neutral-good";
+    }
+    else if(document.getElementById("neutral-good").checked){
+        player.alignment = "neutral-good";
+    }
+    else if(document.getElementById("chaotic-good").checked){
+        player.alignment = "chaotic-good";
+    }
+    else if(document.getElementById("lawful-neutral").checked){
+        player.alignment = "lawful-neutral";
+    }
+    else if(document.getElementById("neutral-neutral").checked){
+        player.alignment = "neutral-neutral";
+    }
+    else if(document.getElementById("chaotic-neutral").checked){
+        player.alignment = "chaotic-neutral";
+    }
+    else if(document.getElementById("lawful-evil").checked){
+        player.alignment = "lawful-evil";
+    }
+    else if(document.getElementById("neutral-evil").checked){
+        player.alignment = "neutral-evil";
+    }
+    else if(document.getElementById("chaotic-evil").checked){
+        player.alignment = "chaotic-evil";
+    }
+
+    console.log(player.alignment);
 });
 
 

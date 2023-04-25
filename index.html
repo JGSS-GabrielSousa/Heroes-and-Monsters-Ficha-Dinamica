@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="scripts/fileHandler.js" defer></script>
-    <script src="scripts/apiHandler.js" defer></script>
-    <script src="scripts/app.js" defer></script>
+    <script src="scripts/fileHandler.js" type="module" defer></script>
+    <script src="scripts/apiHandler.js" type="module" defer></script>
+    <script src="scripts/attributesHandler.js" type="module" defer></script>
+    <script src="scripts/app.js" type="module" defer></script>
     <title>Ficha Dinâmica - Heroes and Monsters</title>
 </head>
 <body>
@@ -136,8 +137,8 @@
                     <option value="samurai">Samurai</option>
                 </select>
 
-                <label for="class-level" >Nível:</label>
-                <input id="class-level" style="width:50px">
+                <label id="class-level-label" for="class-level" class="class-label">Nível:</label>
+                <input id="class-level" class="class-label" style="width:50px">
 
                 <div id="subclass-element">
                     <label for="subclass-select">Sub-Classe:</label>
@@ -146,11 +147,11 @@
                     </select>
                 </div>
 
-                <button onclick="addClass()">Adicionar</button>
-                <button onclick="clearClass()">Limpar Classes</button>
+                <button onclick="addClass()">Adicionar Classe</button>
+                <button onclick="clearClass()">Apagar Classes</button>
 
                 <table id="classes-table">
-                    <th>Nível</th>
+                    <th style="width:40px">Nível</th>
                     <th>Classe</th>
                     <th>Sub-Classe</th>
                 </table>
@@ -160,7 +161,7 @@
                 <label for="alignment-table">Alinhamento:</label>
                 <table id="alignment-table">
                     <tr>
-                        <th class="table-top-left"></th>
+                        <th class="table-hidden"></th>
                         <th>Leal</th>
                         <th>Neutro</th>
                         <th>Caótico</th>
@@ -186,7 +187,82 @@
                 </table>
             </div>
         </div>
+        
         <div id="attributes-section">
+            <table>
+                <tr>
+                    <th class="table-hidden"></th>
+                    <th>Base</th>
+                    <th>Raça</th>
+                    <th>Classe</th>
+                    <th>Nível</th>
+                    <th>Outros</th>
+                    <th class="table-hidden"></th>
+                </tr>
+                <tr id="strength-attribute-section">
+                    <td><h2>Força:</h2></td>
+                    <td><input type="number" id="strength-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="strength-race"></p></td>
+                    <td><p id="strength-class"></p></td>
+                    <td><p id="strength-level"></p></td>
+                    <td><p id="strength-others"></p></td>
+                    <td><h1 id="strength-value">10</h1></td>
+                </tr>
+                <tr id="vitality-attribute-section">
+                    <td><h2>Vitalidade:</h2></td>
+                    <td><input type="number" id="vitality-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="vitality-race"></p></td>
+                    <td><p id="vitality-class"></p></td>
+                    <td><p id="vitality-level"></p></td>
+                    <td><p id="vitality-others"></p></td>
+                    <td><h1 id="vitality-value">10</h1></td>
+                </tr>
+                <tr id="agility-attribute-section">
+                    <td><h2>Agilidade:</h2></td>
+                    <td><input type="number" id="agility-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="agility-race"></p></td>
+                    <td><p id="agility-class"></p></td>
+                    <td><p id="agility-level"></p></td>
+                    <td><p id="agility-others"></p></td>
+                    <td><h1 id="agility-value">10</h1></td>
+                </tr>
+                <tr id="charisma-attribute-section">
+                    <td><h2>Carisma:</h2></td>
+                    <td><input type="number" id="charisma-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="charisma-race"></p></td>
+                    <td><p id="charisma-class"></p></td>
+                    <td><p id="charisma-level"></p></td>
+                    <td><p id="charisma-others"></p></td>
+                    <td><h1 id="charisma-value">10</h1></td>
+                </tr>
+                <tr id="willpower-attribute-section">
+                    <td><h2>Vontade:</h2></td>
+                    <td><input type="number" id="willpower-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="willpower-race"></p></td>
+                    <td><p id="willpower-class"></p></td>
+                    <td><p id="willpower-level"></p></td>
+                    <td><p id="willpower-others"></p></td>
+                    <td><h1 id="willpower-value">10</h1></td>
+                </tr>
+                <tr id="wisdom-attribute-section">
+                    <td><h2>Sabedoria:</h2></td>
+                    <td><input type="number" id="wisdom-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="wisdom-race"></p></td>
+                    <td><p id="wisdom-class"></p></td>
+                    <td><p id="wisdom-level"></p></td>
+                    <td><p id="wisdom-others"></p></td>
+                    <td><h1 id="wisdom-value">10</h1></td>
+                </tr>
+                <tr id="intelligence-attribute-section">
+                    <td><h2>Inteligência:</h2></td>
+                    <td><input type="number" id="intelligence-base" class="attribute-input" value="0" min="0" max="30"></td>
+                    <td><p id="intelligence-race"></p></td>
+                    <td><p id="intelligence-class"></p></td>
+                    <td><p id="intelligence-level"></p></td>
+                    <td><p id="intelligence-others"></p></td>
+                    <td><h1 id="intelligence-value">10</h1></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
