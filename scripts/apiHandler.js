@@ -1,10 +1,10 @@
-let subraces;
-let subclasses;
+export let subraces;
+export let subclasses;
 
 //const API_URL = "http://127.0.0.1:5000/";
-const API_URL = "https://heroes-and-monsters-api.onrender.com/";
+const API_URL = "https://jgss-web-service.onrender.com/hnm/";
 
-async function getData(){
+export async function getData(){
     let response = await fetch(API_URL+"query-subclasses");
     subclasses = await response.json();
 
@@ -13,6 +13,5 @@ async function getData(){
 
     console.log(subclasses);
     console.log(subraces);
-}
 
-getData();
+};
