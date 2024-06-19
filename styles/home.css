@@ -9,10 +9,6 @@ select {
     margin-bottom: 10px;
 }
 
-#interface {
-    margin: 10px;
-}
-
 #top-section {
     display: flex;
     flex-direction: row;
