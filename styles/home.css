@@ -1,126 +1,43 @@
 @import url("styles.css");
 
-button {
-    margin: 5px 0px;
-    min-width: 80px;
+* {
+    font-family: Helvetica, sans-serif;
 }
 
-select {
-    margin-bottom: 10px;
+header {
+    background-color: #333;
+    padding: 5px;
 }
 
-#top-section {
-    display: flex;
-    flex-direction: row;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    color: #f5f5f5;
 }
 
-#top-section button {
-    margin: 10px;
-}
-
-#upper-section {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-#classes {
-    width: 250px;
-}
-
-#classes-table {
-    margin-top: 5px;
-}
-#classes-table th {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #333;
 }
-#classes-table th:first-child,
-#classes-table td:first-child {
-    width: 10px;
+
+li {
+    float: left;
 }
 
-#section-name-race{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-#subrace-element{
-    display: none;
-}
-
-#subclass-element {
-    display: none;
-}
-
-#alignment th {
-    background-color: #333;
-}
-#alignment .table-top-left {
-    border-top: 0px;
-    border-left: 0px;
-    background-color: transparent;
-}
-
-#alignment .left-label {
-    text-align: end;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#alignment table {
-    width: max-content;
-}
-
-#class-level {
-    margin-bottom: 5px;
-}
-
-.class-label {
-    display: none;
-}
-
-#attributes-section {
-    margin-top: 50px;
-    display: inline-flex;
-}
-
-#attributes-section td {
-    border: none;
-}
-
-.attribute-element {
-    display: inline-block;
-    width: 140px;
-    text-align: right;
-}
-
-.attribute-value {
-    color: black;
-    background-color: darkgray;
-    border: 1px solid #333;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px black;
-    padding: 0px 10px;
-    width: 80px;
+li a {
+    display: block;
+    color: white;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-#attributes-section .table-hidden{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-}
-#attributes-section td{
-    padding: 2px;
-}
-#attributes-section h2{
-    text-align: end;
-    margin: 0px 10px 0px 10px;
-}
-#attributes-section h1{
-    text-align: end;
-    margin: 0px 10px 0px 10px;
+button {
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
 }
