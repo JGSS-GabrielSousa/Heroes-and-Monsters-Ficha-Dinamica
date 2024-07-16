@@ -1,9 +1,11 @@
 import { getCharacterData, getGameData } from "./apiHandler.js";
+import { loadHTMLContent } from "./utils.js";
 
 let game;
 let character;
 
 await loadInitialData();
+loadHTMLContent("/character.html", "main");
 
 async function loadInitialData(){
    // game = await getGameData();

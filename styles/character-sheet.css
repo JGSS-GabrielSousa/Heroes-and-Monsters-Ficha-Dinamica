@@ -1,0 +1,14 @@
+#top-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 50px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+#top-section h1,
+#top-section h2,
+#top-section h3 {
+    margin: 5px;
+}
