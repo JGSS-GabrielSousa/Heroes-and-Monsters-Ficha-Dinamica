@@ -1,7 +1,9 @@
 @import url("styles.css");
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
 
 * {
     font-family: Helvetica, sans-serif;
+    font-family: "Belanosima";
 }
 
 header {
@@ -12,8 +14,8 @@ header {
 body {
     padding: 0;
     margin: 0;
-    background-color: #222;
-    color: #f5f5f5;
+    background-color: #fdf1d9;
+    color: black;
 }
 
 ul {
@@ -40,4 +42,10 @@ button {
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+    color: #751d14;
 }

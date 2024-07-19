@@ -77,5 +77,7 @@ async function loadInitialData(){
             },
         }
     }
+
+    
 }
 
