@@ -4,15 +4,6 @@ export function rand(min, max){
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-export function rollDice(formula) {
-    const [numDice, numFaces, bonus] = formula.split(/[d\+]/).map(Number);
-  
-    const rollTotal = Array.from({ length: numDice }, () => Math.floor(Math.random() * numFaces) + 1)
-                         .reduce((sum, val) => sum + val, 0);
-  
-    return rollTotal + bonus;
-}
-
 export function shuffleArr(array){
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -77,6 +68,16 @@ export function loadHTMLContent(url, selector) {
 
 export function rollDice(diceString) {
     
+    /*
+    export function rollDice(formula) {
+        const [numDice, numFaces, bonus] = formula.split(/[d\+]/).map(Number);
+    
+        const rollTotal = Array.from({ length: numDice }, () => Math.floor(Math.random() * numFaces) + 1)
+                            .reduce((sum, val) => sum + val, 0);
+    
+        return rollTotal + bonus;
+    }*/
+
     function rollDiceFunc(diceString){
         function diceRoll(sides) {
             return Math.floor(Math.random() * sides) + 1;
