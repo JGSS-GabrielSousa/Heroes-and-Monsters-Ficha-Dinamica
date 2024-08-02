@@ -6,6 +6,7 @@ let character;
 
 await loadInitialData();
 loadHTMLContent("/character.html", "main");
+loadHTMLContent("/attributes-and-skills.html", "#attributes-and-skills-section");
 
 async function loadInitialData(){
    // game = await getGameData();

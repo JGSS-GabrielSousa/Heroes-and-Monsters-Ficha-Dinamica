@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: "Belanosima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-    background-color: #222;
-    color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+    background-color: #fdf1d9;
+    color: black;
 }
 
 h1 {
@@ -17,18 +23,21 @@ label {
 }
 
 button {
-    padding: 10px;
+    padding: 5px 10px;
     cursor: pointer;
     text-transform: capitalize;
     font-weight: bold;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #f5f5f5;
+    border: 1px solid #888;
+    background-color: #5555;
+    color: #000;
     border-radius: 5px;
 }
 button:hover {
     filter: drop-shadow(1px 1px 2px #33333333);
+    border: 1px solid #999;
     transform: scale(1.025);
+    color: white;
+    background-color: #4b130d;
 }
 
 input {
@@ -79,4 +88,30 @@ th {
     flex-direction: column;
     flex-wrap: nowrap;
     min-height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: #751d14;
 }

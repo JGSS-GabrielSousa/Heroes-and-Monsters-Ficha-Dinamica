@@ -1,0 +1,42 @@
+@import url("styles.css");
+
+header {
+    background-color: #333;
+    padding: 5px;
+}
+header button {
+    background-color: #e0e0e0;
+    padding: 5px;
+    margin-left: 5px;
+}
+header button:hover {
+    border: 1px solid #e0e0e0;
+}
+
+#top-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 50px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    align-items: flex-end;
+}
+#top-section h1,
+#top-section h2,
+#top-section h3 {
+    margin: 5px;
+}
+
+#top-section h1 {
+    font-size: 22px;
+}
+
+#top-section h2 {
+    font-size: 18px;
+}
+
+#top-section h3 {
+    font-size: 14px;
+}
