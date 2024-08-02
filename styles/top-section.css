@@ -24,6 +24,8 @@ header button:hover {
     align-items: flex-end;
     background-color: var(--container-bg);
     border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 #top-section h1,
 #top-section h2,
