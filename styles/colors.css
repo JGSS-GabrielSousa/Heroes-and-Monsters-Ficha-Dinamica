@@ -1,0 +1,29 @@
+/*
+https://goodpalette.io/fcf1d9-4a130d-c2beb4
+*/
+
+:root {
+    --main-bg: #FFFCEC;
+    --container-bg: #FFFAE6;
+    --header-bg: #5C4D3D;
+
+    --main-text: #261F19;
+    --titles-text: #751d14;
+
+    --border: #777;
+
+    --button-bg: #5555;
+    --button-bg-hover: #4b130d;
+    --button-border: #888;
+    --button-border-hover: #999;
+    --button-text: #000;
+    --button-text-hover: white;
+
+    --shadow: #33333333;
+
+    --header-button-bg: #e0e0e0;
+}
+
+.dark-mode {
+    --main-bg: #261F19;
+}

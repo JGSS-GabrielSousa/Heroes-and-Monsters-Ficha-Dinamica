@@ -1,16 +1,16 @@
 @import url("styles.css");
 
 header {
-    background-color: #333;
+    background-color: var(--header-bg);
     padding: 5px;
 }
 header button {
-    background-color: #e0e0e0;
+    background-color: var(--header-button-bg);
     padding: 5px;
     margin-left: 5px;
 }
 header button:hover {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--header-button-bg);
 }
 
 #top-section {
@@ -22,6 +22,8 @@ header button:hover {
     text-align: center;
     align-items: center;
     align-items: flex-end;
+    background-color: var(--container-bg);
+    border-bottom: 1px solid var(--border);
 }
 #top-section h1,
 #top-section h2,
